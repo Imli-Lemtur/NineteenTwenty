@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1920💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Imli & Tasen💗</h1>
+    <p id="countdown"></p>
+    <img id="loveImage" src="" alt="Our love" />
+    <p id="quote"></p>
+    <button onclick="showQuote()"> 👋🍑</button>
+    <button id="toggleTheme" onclick="toggleTheme()">Lights off🌌</button>
+  </div>
+  <div class="news-ticker">
+  <h2 class="ticker-title">Today's Headlines</h2>
+  <div id="rotatingHeadline">Loading cute news...</div>
+  <div class="headline-buttons">
+    <button onclick="prevHeadline()">⟵ Previous</button>
+    <button onclick="nextHeadline()">Next ⟶</button>
+  </div>
+</div>
+
+<div class="playlist-section">
+  <h2>🎶 Our Playlist</h2>
+  <div id="songList">
+    <button onclick="playSong(0)">1. Mitski-My Love Mine All Mine</button>
+    <button onclick="playSong(1)">2. Stromae,Pomme-MaMeilleure Ennemie</button>
+    <button onclick="playSong(2)">3. The Walters--I Love You So</button>
+    <button onclick="playSong(3)">4. Joji,Diplo-Daylight</button>
+    <button onclick="playSong(4)">5. Dhruv-double take</button>
+    <button onclick="playSong(5)">6. ZAYN-Better</button>
+    <button onclick="playSong(6)">7. Pink Sweat$-At My Worst feat.Kehlani.</button>
+    <button onclick="playSong(7)">8. Kendrick Lamar-luther</button>
+    <button onclick="playSong(8)">9. Joji_-_Sanctuary</button>
+    <button onclick="playSong(9)">10. I_Wanna_Be_Yours</button>
+    <button onclick="playSong(10)">11. IU BBIBBI</button>
+    <button onclick="playSong(11)">12. Bôa_-_Duvet</button>
+    <button onclick="playSong(12)">13. BTS_-_Life_Goes_On</button>
+    <button onclick="playSong(13)">14. SLOW_DANCING_IN_THE_DARK</button>
+    <button onclick="playSong(14)">15. Joji_-_Die_For_You</button>
+    <button onclick="playSong(15)">16. Kendrick_Lamar_-_LOVE.</button>
+    <button onclick="playSong(16)">17. Tame_Impala_-_The_Less_I_Know_The_Better</button>
+    <button onclick="playSong(17)">18. New_West_-_Those_Eyes__</button>
+    <button onclick="playSong(18)">19. LISA_-_Dream__</button>
+    <button onclick="playSong(19)">20. Radiohead_-_No_Surprises</button>
+    <button onclick="playSong(20)">21. Ice_Cube_-_You_Know_How_We_Do_it</button>
+    <button onclick="playSong(21)">22. Kanye_West_-_Bound_2</button>
+    <button onclick="playSong(22)">23. Rich_Brian,_NIKI,___Warren_Hue_-_California</button>
+    <button onclick="playSong(23)">24. Fun_-_Carry_On</button>
+    <button onclick="playSong(24)">25. Kendrick_Lamar,_SZA_-_All_The_Stars</button>
+    <button onclick="playSong(25)">26. SZA_-_Open_Arms_ft._Travis_Scott</button>
+    <button onclick="playSong(26)">27. d4vd_-_Here_With_Me</button>
+    <button onclick="playSong(27)">28. Somebody_That_I_Used_To_Know_Gotye</button>
+    <button onclick="playSong(28)">29. I_REALLY_WANT_TO_STAY_AT_YOUR_HOUSE-Rosa_Walton</button>
+    <button onclick="playSong(29)">30. Lady_Gaga,_Bruno_Mars_-_Die_With_A_Smile_</button>
+    <button onclick="playSong(30)">31. Travis_Scott_-_MY_EYES_</button>
+    <button onclick="playSong(31)">32. The Weeknd Die_For_You</button>
+    <button onclick="playSong(32)">33. Coldplay_-_Yellow_</button>
+    <button onclick="playSong(33)">34. IU Love_wins_all</button>
+    <button onclick="playSong(34)">35. Kanye West Ghost_Town</button>
+    <button onclick="playSong(35)">36. Kendrick_Lamar_-_Not_Like_Us_</button>
+    <button onclick="playSong(36)">37. Justin_Timberlake_-_Mirrors_</button>
+    <button onclick="playSong(37)">38.Tyler the Creator Like_Him</button>
+    <button onclick="playSong(38)">39. Prateek_Kuhad_-_cold_mess</button>
+    <button onclick="playSong(39)">40. Apocalypse_-_Cigarettes_After_Sex_</button>
+    <button onclick="playSong(40)">41. Beach_House_-_Space_Song_</button>
+    <button onclick="playSong(41)">42. Kanye_West_-_Runaway__Lyrics__ft._Pusha_T</button>
+    <button onclick="playSong(42)">43. Dire_Straits_-_Sultans_Of_Swing_</button>
+    <button onclick="playSong(43)">44. Kendrick Lamar Money_Trees</button>
+    <button onclick="playSong(44)">45. Avenged Sevenfold Buried_Alive</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  <button onclick="playSong()">. I_Wanna_Be_Yours(256k).mp3</button>
+  
+     
+  </div>
+
+  <audio id="audioPlayer" controls>
+    Your browser does not support the audio element.
+  </audio>
+  <label for="volumeSlider">🔊 Volume</label>
+<input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+</div>
+<!-- Catch the Kisses Game -->
+<section id="kissGameSection" style="text-align: center; margin-top: 40px;">
+  <h2 style="color: hotpink;">💋 Catch the Kisses Game 😘</h2>
+  <button onclick="startGame()" style="padding: 10px 20px; font-size: 16px; border-radius: 10px;">Start Game</button>
+  <p id="scoreDisplay" style="margin-top: 10px; font-size: 18px;"></p>
+  <button id="retryBtn" onclick="startGame()" style="display: none; margin-top: 10px; padding: 8px 16px; font-size: 15px; border-radius: 10px;">Try Again 💘</button>
+  <canvas id="kissCanvas" width="300" height="400" style="background: #fff0f5; display: none; border-radius: 12px; margin-top: 10px;"></canvas>
+</section>
+<script>
+  const headlines = [
+  "Breaking: Imli caught staring at Tasen for 3 hours straight 🥹",
+  "Exclusive: Tasen steals blanket again — Imli suffers chilly consequences ❄️😂",
+  "Experts confirm: No one loves like Imli and Tasen 💞",
+  "Alert: Tasen's smile caused Imli to forget what he was doing 😵",
+  "Drama unfolds as Imli forgets to reply 'I love you more' — chaos ensues 🫣",
+  "Report: Couple seen laughing at their own inside joke for 47 minutes 🤭",
+  "Update: Imli makes coffee for Tasen — world calls it ‘peak romance’ ☕❤️",
+  "Tasen declares Imli's eyes a national treasure 😍",
+  "Gossip: Imli secretly planning cutest surprise for Tasen 🎁🧸",
+  "Historic moment: Tasen says 'I love you' 27 times in a row 😳💕",
+  "Exclusive: Tasen dozes off mid-convo again — Imli files official complaint 😴📢",
+  "Update: Imli and Tasen's MLBB duo wrecks enemy team and relationship goals 💥🎮",
+  "Scandal: Tasen eats everything, Imli judges menu for 20 minutes and still picks chicken 🍗😂",
+  "Report: Tasen finishes 8 episodes of K-drama in one sitting — Imli ignored but supportive 🇰🇷📺",
+  "Drama: Imli burns toast, Tasen whips up gourmet meal — tables have turned 🍳🔥",
+  "Romance Alert: Couple caught making out in public again — fined for public cuteness 💋💸",
+  "Investigation: Tasen caught sleep-talking about MLBB and noodles 🌙💬",
+  "Flash News: Imli refuses to eat broccoli, again. Tasen sighs in defeat 🥦😐",
+  "Cooking Showdown: Tasen makes Maggi, Imli makes biryani — nation divided 🍜 vs 🍛",
+  "LOL Update: Imli acts dramatic during ranked match loss, Tasen calls timeout 😂🕹️",
+  "Caught in the act: Couple spotted laughing at the same meme for 15 minutes straight 😭📱",
+  "Study: 9 out of 10 kisses from Imli happen when Tasen is not ready 😳💋",
+  "Exclusive: Tasen says 'I'm full', then steals fries from Imli’s plate 🍟🤨",
+  "Alert: Tasen slept mid-Kdrama, Imli now 5 episodes ahead — tensions rise ⚔️📺"
+];
+
+let currentHeadline = 0;
+const headlineElement = document.getElementById("rotatingHeadline");
+
+function showHeadline() {
+  headlineElement.textContent = headlines[currentHeadline];
+}
+
+function nextHeadline() {
+  currentHeadline = (currentHeadline + 1) % headlines.length;
+  showHeadline();
+}
+
+function prevHeadline() {
+  currentHeadline = (currentHeadline - 1 + headlines.length) % headlines.length;
+  showHeadline();
+}
+
+// Auto-rotate every 5 seconds
+setInterval(nextHeadline, 5000);
+
+// Initial display
+showHeadline();
+</script>
+
+
+<script>
+  const songs = [
+  "Mitski-My Love Mine All Mine.mp3",
+  "Stromae,Pomme-MaMeilleure Ennemie.mp3",
+  "The Walters--I Love You So.mp3",
+  "Joji,Diplo-Daylight.mp3",
+  "Dhruv-double take.mp3",
+  "ZAYN-Better.mp3",
+  "Pink Sweat$-At My Worst feat.Kehlani.mp3",
+  "Kendrick Lamar-luther.mp3",
+  "Joji_-_Sanctuary___Lyrics(256k).mp3",
+  "I_Wanna_Be_Yours(256k).mp3",
+  "IU__아이유___삐삐_BBIBBI___LYRICS_가사__Eng_Rom_Han_(256k).mp3",
+  "Bôa_-_Duvet__Lyrics_(256k).mp3",
+  "BTS_-_Life_Goes_On__Audio_(256k).mp3",
+  "SLOW_DANCING_IN_THE_DARK(256k).mp3",
+  "Joji_-_Die_For_You(256k).mp3",
+  "Kendrick_Lamar_-_LOVE.__Lyrics__ft._Zacari(256k).mp3",
+  "Tame_Impala_-_The_Less_I_Know_The_Better__Audio_(256k).mp3",
+  "New_West_-_Those_Eyes__Lyrics_(256k).mp3",
+  "LISA_-_Dream__Lyric_Video_(256k).mp3",
+  "Radiohead_-_No_Surprises(256k).mp3",
+  "Ice_Cube_-_You_Know_How_We_Do_It(256k).mp3",
+  "Kanye_West_-_Bound_2__audio_(256k).mp3",
+  "Rich_Brian,_NIKI,___Warren_Hue_-_California__Official_Music_Video_(256k).mp3",
+  "Fun_-_Carry_On__Lyrics_video_(256k).mp3",
+  "Kendrick_Lamar,_SZA_-_All_The_Stars(256k).mp3",
+  "SZA_-_Open_Arms__Official_Audio__ft._Travis_Scott(256k).mp3",
+  "d4vd_-_Here_With_Me__Official_Audio_(256k).mp3",
+  "Somebody_That_I_Used_To_Know___Gotye___Lyrics_Video(256k).mp3",
+  "CYBERPUNK_2077_SOUNDTRACK_-_I_REALLY_WANT_TO_STAY_AT_YOUR_HOUSE_by_Rosa_Walton___Hallie_Coggins(256k).mp3",
+  "Lady_Gaga,_Bruno_Mars_-_Die_With_A_Smile__Lyrics_(256k).mp3",
+  "Travis_Scott_-_MY_EYES__Official_Audio_(256k).mp3",
+  "The Weeknd Die_For_You(256k).mp3",
+  "Coldplay_-_Yellow__Lyrics_(256k).mp3",
+  "IU__아이유___Love_wins_all__Official_Audio(256k).mp3",
+  "Ghost_Town(256k).mp3",
+  "Kendrick_Lamar_-_Not_Like_Us__Lyrics__Drake_Diss(256k).mp3",
+  "Justin_Timberlake_-_Mirrors__Lyrics_(256k).mp3",
+  "Like_Him(256k).mp3",
+  "Prateek_Kuhad_-_cold_mess__Lyrics_(256k).mp3",
+  "Apocalypse_-_Cigarettes_After_Sex_[Lyrics_Vietsub](256k).mp3",
+  "Beach_House_-_Space_Song__Lyrics_(256k).mp3",
+  "Kanye_West_-_Runaway__Lyrics__ft._Pusha_T(256k).mp3",
+  "Dire_Straits_-_Sultans_Of_Swing__Lyric_Video_(256k).mp3",
+  "Kendrick Lamar Money_Trees(256k).mp3",
+  "Avenged Sevenfold Buried_Alive(256k).mp3"
+  
+  
+];
+
+function playSong(index) {
+  // Volume control
+const volumeSlider = document.getElementById("volumeSlider");
+const audioPlayer = document.getElementById("audioPlayer");
+
+volumeSlider.addEventListener("input", function () {
+  audioPlayer.volume = volumeSlider.value;
+});
+  const audio = document.getElementById("audioPlayer");
+  audio.src = songs[index];
+  audio.play();
+}
+</script>
+
+<script>
+  const allQuotes = [
+    { text: "You're my favorite kind of forever.", image: "Pic1.jpg" },
+    { text: "In your smile, I see something more beautiful than stars.", image: "Pic2.jpg" },
+    { text: "You're not just my love, you're my peace.", image: "Pic3.jpg" },
+    { text: "You and I — we are a small infinity.", image: "Pic4.jpg" },
+    { text: "Even the stars get jealous of your sparkle.", image: "Pic5.jpg" },
+    { text: "Loving you feels like breathing — I can’t stop.", image: "Pic6.jpg" },
+    { text: "You’re the song I never knew I was humming.", image: "Pic7.jpg" },
+    { text: "You are my today and all of my tomorrows.", image: "Pic8.jpg" },
+    { text: "Every love story is beautiful, but ours is my favorite.", image: "Pic9.jpg" },
+    { text: "I would find you in every lifetime.", image: "Pic10.jpg" },
+    { text: "You make me believe in soulmates.", image: "Pic11.jpg" },
+    { text: "I still fall for you every single day.", image: "Pic12.jpg" },
+    { text: "Call me daddy.", image: "Pic13.jpg" },
+    { text: "If I had to dream up the perfect person, it’d still be you.", image: "Pic14.jpg" },
+    { text: "Jungerja🫠🔥🥵.", image: "Pic15.jpg" },
+    { text: "These would look great wrapped around my neck.", image: "Pic16.jpg" }
+  ];
+
+  let shuffledQuotes = [];
+  let currentIndex = 0;
+  let typingInProgress = false;
+
+  function shuffleQuotes() {
+    shuffledQuotes = [...allQuotes];
+    for (let i = shuffledQuotes.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledQuotes[i], shuffledQuotes[j]] = [shuffledQuotes[j], shuffledQuotes[i]];
+    }
+    currentIndex = 0;
+  }
+
+  function showQuote() {
+    if (typingInProgress) return; // Prevent overlapping animations
+    if (currentIndex >= shuffledQuotes.length) shuffleQuotes();
+
+    const selected = shuffledQuotes[currentIndex++];
+    const quoteElement = document.getElementById("quote");
+    const imageElement = document.getElementById("loveImage");
+    const nextBtn = document.querySelector("button");
+
+    quoteElement.innerHTML = "";
+    imageElement.src = selected.image;
+    typingInProgress = true;
+    nextBtn.disabled = true;
+
+    let i = 0;
+    const text = selected.text;
+
+    function typeWriter() {
+      if (i < text.length) {
+        quoteElement.innerHTML += text[i] === " " ? "&nbsp;" : text[i];
+        i++;
+        setTimeout(typeWriter, 40);
+      } else {
+        typingInProgress = false;
+        nextBtn.disabled = false;
+      }
+    }
+
+    typeWriter();
+  }
+function showCountdown() {
+  const startDate = new Date("2017-10-11T00:00:00"); // Replace with your actual date and time
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerText =
+      `We've been in love for ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds 💖`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000); // Update every second
+}
+
+  function toggleTheme() {
+    const body = document.body;
+    const button = document.getElementById("toggleTheme");
+
+    body.classList.toggle("night-mode");
+
+    if (body.classList.contains("night-mode")) {
+      createStars();
+      button.innerText = "Lights on ☀️";
+    } else {
+      removeStars();
+      button.innerText = "Lights off 🌌";
+    }
+  }
+
+  function createStars() {
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${1 + Math.random() * 2}s`;
+      document.body.appendChild(star);
+    }
+  }
+
+  function removeStars() {
+    document.querySelectorAll('.star').forEach(star => star.remove());
+  }
+
+  window.onload = function () {
+    shuffleQuotes();
+    showQuote();
+    showCountdown();
+  };
+</script>
+
+
+<script>
+  const canvas = document.getElementById("kissCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const flirtyMessages = [
+    "That’s how many kisses I’m planting on you the moment I see you 😘💋",
+    "Oops, you broke the kiss-o-meter 😵‍💫🔥",
+    "You caught them… now you better be ready to receive them 😈💋",
+    "That’s your kiss debt. I’m paying it off *with interest* 😏💞",
+    "Looks like someone’s a pro at catching feelings *and* kisses 😚❤️",
+    "You're dangerously kissable at this point 😳💘",
+    "No takebacks. You’re getting them all 💋😎",
+    "That's a lot of kisses... hope your lips are ready 😏💄",
+    "That’s how many kisses you’re *legally* owed by me now 😤❤️",
+    "You just unlocked ultra-kiss mode 💋💋💋"
+  ];
+
+  let kisses = [];
+  let score = 0;
+  let gameInterval;
+  let kissFallSpeed = 2;
+
+  function startGame()
+  {
+    document.getElementById("retryBtn").style.display = "none";
+    score = 0;
+    kisses = [];
+    document.getElementById("scoreDisplay").innerText = "Kisses caught: 0 😘";
+    canvas.style.display = "block";
+
+    // Generate kisses every 300ms
+    gameInterval = setInterval(() => {
+      const x = Math.random() * (canvas.width - 30);
+      kisses.push({ x: x, y: 0 });
+    }, 300);
+
+    requestAnimationFrame(updateGame);
+
+    // Stop after 15 seconds
+    setTimeout(() => {
+      clearInterval(gameInterval);
+      canvas.style.display = "none";
+      const randomMsg = flirtyMessages[Math.floor(Math.random() * flirtyMessages.length)];
+      document.getElementById("scoreDisplay").innerText =
+        `You caught ${score} kisses 😚💋\n${randomMsg}`;
+        document.getElementById("retryBtn").style.display = "inline-block";
+    }, 15000);
+  }
+
+  function updateGame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < kisses.length; i++) {
+      const k = kisses[i];
+      ctx.fillStyle = "hotpink";
+      ctx.font = "24px Arial";
+      ctx.fillText("💋", k.x, k.y);
+      k.y += kissFallSpeed;
+
+      // Remove if out of view
+      if (k.y > canvas.height) {
+        kisses.splice(i, 1);
+        i--;
+      }
+    }
+
+    requestAnimationFrame(updateGame);
+  }
+
+  canvas.addEventListener("click", function (e) {
+    const rect = canvas.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+
+    for (let i = 0; i < kisses.length; i++) {
+      const k = kisses[i];
+      if (
+        clickX > k.x && clickX < k.x + 30 &&
+        clickY > k.y - 24 && clickY < k.y + 10
+      ) {
+        score++;
+        kisses.splice(i, 1);
+        document.getElementById("scoreDisplay").innerText = `Kisses caught: ${score} 😘`;
+        break;
+      }
+    }
+  });
+</script>
+</body>
+  </html>
