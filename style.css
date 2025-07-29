@@ -1,0 +1,155 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4e8e1; /* Beige background */
+  color: #3e3e3e; /* Cocoa text */
+  text-align: center;
+  padding: 20px;
+  transition: background 1s ease;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #b5838d; /* Dusty rose */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+#countdown {
+  font-weight: bold;
+  font-size: 18px;
+  color: #b5838d;
+  margin-bottom: 15px;
+}
+
+#quote {
+  font-size: 20px;
+  color: #b5838d;
+  margin: 20px 0;
+  min-height: 60px;
+  line-height: 1.5;
+}
+
+#loveImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #b5838d; /* Dusty rose */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #a06a74;
+}
+
+/* Starry Night Mode */
+body.night-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+.playlist-section {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(244, 232, 225, 0.9); /* Soft beige */
+  border-radius: 15px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#songList button {
+  background-color: #d9a5b3; /* Light dusty rose */
+  border: none;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#songList button:hover {
+  background-color: #b5838d;
+  color: white;
+}
+
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#volumeSlider {
+  width: 100%;
+  margin-top: 10px;
+  accent-color: #b5838d; /* Dusty rose slider */
+}
+.news-ticker {
+  background-color: #fbe9e7; /* dusty rose */
+  color: #5d4037; /* cocoa */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ticker-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #6d4c41; /* deeper cocoa */
+}
+
+.headline-buttons button {
+  background-color: #d7a89e; /* beige-rose */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 10px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.headline-buttons button:hover {
+  background-color: #a97c75; /* darker cocoa hover */
+}
