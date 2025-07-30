@@ -152,8 +152,9 @@ audio {
 
 .headline-buttons button:hover {
   background-color: #a97c75; /* darker cocoa hover */
-
-  .looped-video {
+  
+}
+.looped-video {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
@@ -184,5 +185,4 @@ audio {
   color: #704f46;
   font-style: italic;
   margin-top: 8px;
-}
 }
