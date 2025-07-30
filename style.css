@@ -152,4 +152,37 @@ audio {
 
 .headline-buttons button:hover {
   background-color: #a97c75; /* darker cocoa hover */
+
+  .looped-video {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3d6d0, #e8cfc3); /* dusty rose + beige */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 2px solid #c9a798; /* cocoa accent border */
+}
+
+.looped-video h2 {
+  font-size: 24px;
+  color: #5a3b34; /* cocoa text */
+  margin-bottom: 12px;
+}
+
+.looped-video video {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #dcb0a0; /* soft border around video */
+}
+
+.video-caption {
+  font-size: 14px;
+  color: #704f46;
+  font-style: italic;
+  margin-top: 8px;
+}
 }
