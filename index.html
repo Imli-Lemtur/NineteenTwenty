@@ -446,5 +446,37 @@ function showCountdown() {
     }
   });
 </script>
+  <script>
+  const noBtn = document.getElementById('runawayNoBtn');
+
+  function runAway() {
+    // Switch positioning to fixed so it glides around the screen
+    noBtn.style.position = 'fixed';
+    
+    const padding = 20;
+    const maxLeft = window.innerWidth - noBtn.offsetWidth - padding;
+    const maxTop = window.innerHeight - noBtn.offsetHeight - padding;
+
+    // Calculate random coordinates safely inside screen bounds
+    const randomLeft = Math.max(padding, Math.floor(Math.random() * maxLeft));
+    const randomTop = Math.max(padding, Math.floor(Math.random() * maxTop));
+
+    noBtn.style.left = `${randomLeft}px`;
+    noBtn.style.top = `${randomTop}px`;
+  }
+
+  // Trigger dodging on hover for desktop and touch for mobile
+  noBtn.addEventListener('mouseover', runAway);
+  noBtn.addEventListener('touchstart', function(e) {
+    e.preventDefault(); // Prevents tapping/clicking on mobile devices
+    runAway();
+  });
+
+  // Action when YES is clicked
+  function handleYesClick() {
+    alert("I knew it! You had no choice anyway 💖");
+  }
+  </script>
+  
 </body>
   </html>
