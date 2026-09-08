@@ -367,45 +367,115 @@ function showCountdown() {
 
   let kisses = [];
   let score = 0;
-  let gameInterval;
-  let kissFallSpeed = 2;
+  let gameInterval = null;
+  let gameTimeout = null;
+  let animationFrame = null;
+  let gameRunning = false;
 
-  function startGame()
-  {
+  // Pixels per second
+  const kissFallSpeed = 120;
+
+  let lastTime = 0;
+
+  function startGame() {
+
+    // Stop any previous game completely
+    gameRunning = false;
+
+    if (gameInterval) {
+      clearInterval(gameInterval);
+      gameInterval = null;
+    }
+
+    if (gameTimeout) {
+      clearTimeout(gameTimeout);
+      gameTimeout = null;
+    }
+
+    if (animationFrame) {
+      cancelAnimationFrame(animationFrame);
+      animationFrame = null;
+    }
+
     document.getElementById("retryBtn").style.display = "none";
+
     score = 0;
     kisses = [];
-    document.getElementById("scoreDisplay").innerText = "Kisses caught: 0 😘";
+
+    document.getElementById("scoreDisplay").innerText =
+      "Kisses caught: 0 😘";
+
     canvas.style.display = "block";
+
+    gameRunning = true;
+    lastTime = performance.now();
 
     // Generate kisses every 300ms
     gameInterval = setInterval(() => {
+      if (!gameRunning) return;
+
       const x = Math.random() * (canvas.width - 30);
-      kisses.push({ x: x, y: 0 });
+      kisses.push({
+        x: x,
+        y: 0
+      });
     }, 300);
 
-    requestAnimationFrame(updateGame);
+    // Start animation
+    animationFrame = requestAnimationFrame(updateGame);
 
     // Stop after 15 seconds
-    setTimeout(() => {
-      clearInterval(gameInterval);
+    gameTimeout = setTimeout(() => {
+
+      gameRunning = false;
+
+      if (gameInterval) {
+        clearInterval(gameInterval);
+        gameInterval = null;
+      }
+
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+
       canvas.style.display = "none";
-      const randomMsg = flirtyMessages[Math.floor(Math.random() * flirtyMessages.length)];
+
+      const randomMsg =
+        flirtyMessages[
+          Math.floor(Math.random() * flirtyMessages.length)
+        ];
+
       document.getElementById("scoreDisplay").innerText =
         `You caught ${score} kisses 😚💋\n${randomMsg}`;
-        document.getElementById("retryBtn").style.display = "inline-block";
+
+      document.getElementById("retryBtn").style.display = "inline-block";
+
     }, 15000);
   }
 
-  function updateGame() {
+
+  function updateGame(currentTime) {
+
+    if (!gameRunning) return;
+
+    // Calculate time since previous frame
+    const deltaTime = (currentTime - lastTime) / 1000;
+
+    lastTime = currentTime;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < kisses.length; i++) {
+
       const k = kisses[i];
+
       ctx.fillStyle = "hotpink";
       ctx.font = "24px Arial";
       ctx.fillText("💋", k.x, k.y);
-      k.y += kissFallSpeed;
+
+      // Move based on REAL TIME, not frames
+      k.y += kissFallSpeed * deltaTime;
 
       // Remove if out of view
       if (k.y > canvas.height) {
@@ -414,29 +484,42 @@ function showCountdown() {
       }
     }
 
-    requestAnimationFrame(updateGame);
+    animationFrame = requestAnimationFrame(updateGame);
   }
 
+
   canvas.addEventListener("click", function (e) {
+
+    if (!gameRunning) return;
+
     const rect = canvas.getBoundingClientRect();
+
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
 
     for (let i = 0; i < kisses.length; i++) {
+
       const k = kisses[i];
+
       if (
-        clickX > k.x && clickX < k.x + 30 &&
-        clickY > k.y - 24 && clickY < k.y + 10
+        clickX > k.x &&
+        clickX < k.x + 30 &&
+        clickY > k.y - 24 &&
+        clickY < k.y + 10
       ) {
+
         score++;
+
         kisses.splice(i, 1);
-        document.getElementById("scoreDisplay").innerText = `Kisses caught: ${score} 😘`;
+
+        document.getElementById("scoreDisplay").innerText =
+          `Kisses caught: ${score} 😘`;
+
         break;
       }
     }
   });
 </script>
-
   
 </body>
   </html>
